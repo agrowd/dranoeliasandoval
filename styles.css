@@ -683,12 +683,30 @@ ul {
     background: var(--gold);
 }
 
+/* Card badge (Ultherapy star) */
+.card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, var(--gold), var(--soft-peach));
+    color: var(--carbon);
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+    z-index: 3;
+}
+
 /* ═══════════════════════════════════════════════════════
    SECTION 3: ARMONIZACIÓN FACIAL
    ═══════════════════════════════════════════════════════ */
 .section-armonizacion {
     background: var(--white);
 }
+
 
 .injectable-grid {
     display: grid;
@@ -787,8 +805,96 @@ ul {
 }
 
 /* ═══════════════════════════════════════════════════════
-   SECTION 4: DOCTORA / AUTORIDAD
+   SECTION 4: MEDICINA REGENERATIVA
    ═══════════════════════════════════════════════════════ */
+.section-regenerativa {
+    background: var(--cream);
+}
+
+.regenerativa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.regenerativa-card {
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.regenerativa-card:hover {
+    border-color: rgba(200, 169, 126, 0.3);
+    box-shadow: 0 16px 50px rgba(44, 44, 44, 0.1);
+    transform: translateY(-4px);
+}
+
+.regenerativa-image-wrap {
+    height: 280px;
+    overflow: hidden;
+}
+
+.regenerativa-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.regenerativa-card:hover .regenerativa-image-wrap img {
+    transform: scale(1.04);
+}
+
+.regenerativa-content {
+    padding: 32px;
+}
+
+.regenerativa-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--carbon);
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.regenerativa-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.regenerativa-benefits {
+    margin-bottom: 28px;
+}
+
+.regenerativa-benefits li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--carbon);
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.regenerativa-benefits li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    font-size: 6px;
+    color: var(--gold);
+    top: 7px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SECTION 5: DOCTORA / AUTORIDAD
+   ═══════════════════════════════════════════════════════ */
+
 .section-doctora {
     background: var(--carbon);
     color: var(--white);
@@ -1055,6 +1161,11 @@ ul {
     .treatments-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    .regenerativa-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .doctora-grid {
