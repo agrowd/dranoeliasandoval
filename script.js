@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── Subtle Parallax on Hero ───
     const heroBgImg = document.querySelector('.hero-bg-img');
-    
+
     if (heroBgImg) {
         window.addEventListener('scroll', () => {
             if (window.scrollY < window.innerHeight) {
@@ -157,4 +157,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─── Trigger initial scroll handlers ───
     handleNavbarScroll();
     handleFloatingCta();
+
+    // ─── Doctor Photo Carousel ───
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalSlides = dots.length;
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    function goToSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+    }
+
+    function startAutoplay() {
+        autoplayTimer = setInterval(() => goToSlide(currentIndex + 1), 4000);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayTimer);
+    }
+
+    if (track && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => { goToSlide(currentIndex - 1); stopAutoplay(); startAutoplay(); });
+        nextBtn.addEventListener('click', () => { goToSlide(currentIndex + 1); stopAutoplay(); startAutoplay(); });
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.dataset.index));
+                stopAutoplay();
+                startAutoplay();
+            });
+        });
+        track.parentElement.addEventListener('mouseenter', stopAutoplay);
+        track.parentElement.addEventListener('mouseleave', startAutoplay);
+        startAutoplay();
+    }
 });

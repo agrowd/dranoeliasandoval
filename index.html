@@ -126,7 +126,8 @@
             <!-- Card 1: Ultherapy Prime -->
             <article class="treatment-card animate-on-scroll" id="card-ultherapy">
                 <div class="card-image-wrap">
-                    <img src="assets/images/ultherapy.png" alt="Ultherapy Prime lifting sin cirugía" loading="lazy">
+                    <img src="assets/images/dra-carousel-5.jpg" alt="Ultherapy Prime lifting sin cirugía"
+                        loading="lazy">
                     <div class="card-image-overlay"></div>
                     <span class="card-badge">★ Estrella</span>
                 </div>
@@ -175,7 +176,7 @@
             <!-- Card 3: Ginecología Láser -->
             <article class="treatment-card animate-on-scroll" id="card-gineco">
                 <div class="card-image-wrap">
-                    <img src="assets/images/ginecologia-laser.png" alt="Ginecología Láser CO₂" loading="lazy">
+                    <img src="assets/images/dra-carousel-2.jpg" alt="Ginecología Láser CO₂" loading="lazy">
                     <div class="card-image-overlay"></div>
                 </div>
                 <div class="card-content">
@@ -343,8 +344,7 @@
             <!-- Card 10: Exéresis de Lunares -->
             <article class="treatment-card animate-on-scroll" id="card-exeresis">
                 <div class="card-image-wrap">
-                    <img src="assets/images/exeresis-lunares.png" alt="Exéresis de lunares con láser CO2"
-                        loading="lazy">
+                    <img src="assets/images/dra-carousel-4.jpg" alt="Exéresis de lunares con láser CO2" loading="lazy">
                     <div class="card-image-overlay"></div>
                 </div>
                 <div class="card-content">
@@ -368,7 +368,7 @@
             <!-- Card 11: Medicina Reconstructiva -->
             <article class="treatment-card animate-on-scroll" id="card-reconstructiva">
                 <div class="card-image-wrap">
-                    <img src="assets/images/medicina-reconstructiva.png" alt="Medicina reconstructiva de cicatrices"
+                    <img src="assets/images/dra-elegante.jpg" alt="Medicina reconstructiva de cicatrices"
                         loading="lazy">
                     <div class="card-image-overlay"></div>
                 </div>
@@ -502,11 +502,50 @@
         <div class="container">
             <div class="doctora-grid">
                 <div class="doctora-image animate-on-scroll">
-                    <div class="doctora-frame">
-                        <img src="assets/images/doctor-portrait.png" alt="Dra. Noelia Sandoval - Medicina Estética"
-                            loading="lazy">
+                    <!-- Carousel Dra. Noelia Sandoval -->
+                    <div class="doctora-carousel" id="doctoraCarousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide">
+                                <img src="assets/images/dra-carousel-1.jpg" alt="Dra. Noelia Sandoval con equipo láser">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/dra-carousel-2.jpg"
+                                    alt="Dra. Noelia Sandoval en su consultorio">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/dra-carousel-3.jpg"
+                                    alt="Dra. Noelia Sandoval con tecnología láser">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/dra-carousel-4.jpg" alt="Dra. Noelia Sandoval especialista">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/dra-carousel-5.jpg"
+                                    alt="Dra. Noelia Sandoval medicina estética">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Anterior">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
+                        </button>
+                        <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Siguiente">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </button>
+                        <!-- Dots -->
+                        <div class="carousel-dots" id="carouselDots">
+                            <button class="carousel-dot active" data-index="0"></button>
+                            <button class="carousel-dot" data-index="1"></button>
+                            <button class="carousel-dot" data-index="2"></button>
+                            <button class="carousel-dot" data-index="3"></button>
+                            <button class="carousel-dot" data-index="4"></button>
+                        </div>
                     </div>
-                    <div class="doctora-frame-accent"></div>
                 </div>
 
                 <div class="doctora-content animate-on-scroll">
