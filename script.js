@@ -195,4 +195,50 @@ document.addEventListener('DOMContentLoaded', () => {
         track.parentElement.addEventListener('mouseleave', startAutoplay);
         startAutoplay();
     }
+
+    // ─── Generic Card Carousels ───
+    const cardCarousels = document.querySelectorAll('.card-carousel');
+
+    cardCarousels.forEach(carousel => {
+        const track = carousel.querySelector('.card-carousel-track');
+        const prevBtn = carousel.querySelector('.card-carousel-prev');
+        const nextBtn = carousel.querySelector('.card-carousel-next');
+        const dots = carousel.querySelectorAll('.card-carousel-dot');
+        const slidesCount = dots.length;
+        if (!track || slidesCount === 0) return;
+
+        let currentIndex = 0;
+        let autoplayTimer = null;
+
+        const updateCarousel = (index) => {
+            currentIndex = (index + slidesCount) % slidesCount;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        };
+
+        const startAuto = () => {
+            // Randomize slightly so they don't all slide exactly at the same millisecond
+            autoplayTimer = setInterval(() => updateCarousel(currentIndex + 1), 3500 + Math.random() * 1000);
+        };
+
+        const stopAuto = () => {
+            clearInterval(autoplayTimer);
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', () => { updateCarousel(currentIndex - 1); stopAuto(); startAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', () => { updateCarousel(currentIndex + 1); stopAuto(); startAuto(); });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                updateCarousel(parseInt(dot.dataset.index));
+                stopAuto();
+                startAuto();
+            });
+        });
+
+        carousel.addEventListener('mouseenter', stopAuto);
+        carousel.addEventListener('mouseleave', startAuto);
+
+        startAuto();
+    });
 });
