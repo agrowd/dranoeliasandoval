@@ -621,7 +621,9 @@ ul {
 
 .card-image-wrap img {
     width: 100%;
-    height: auto;
+    height: 280px;
+    object-fit: contain;
+    background: #f5f0eb;
     display: block;
     transition: transform var(--transition-medium);
 }
@@ -932,7 +934,9 @@ ul {
 
 .regenerativa-image-wrap img {
     width: 100%;
-    height: auto;
+    height: 280px;
+    object-fit: contain;
+    background: #f5f0eb;
     display: block;
     transition: transform var(--transition-slow);
 }
@@ -1503,20 +1507,11 @@ ul {
     background: var(--cream);
 }
 
-/* Mobile: let all images show complete */
+/* Mobile: only blefaroplastia and reconstructiva show full height */
 @media (max-width: 768px) {
-    .card-image-wrap {
-        max-height: none;
-    }
-    .card-image-wrap img {
+    #card-blefaroplastia .card-image-wrap img,
+    #card-reconstructiva .card-image-wrap img {
         height: auto;
-        width: 100%;
-    }
-    .regenerativa-image-wrap {
-        max-height: none;
-    }
-    .regenerativa-image-wrap img {
-        height: auto;
-        width: 100%;
+        object-fit: contain;
     }
 }
