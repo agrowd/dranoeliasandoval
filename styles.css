@@ -616,6 +616,7 @@ ul {
 .card-image-wrap {
     position: relative;
     overflow: hidden;
+    max-height: 280px;
 }
 
 .card-image-wrap img {
