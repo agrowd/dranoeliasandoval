@@ -923,14 +923,15 @@ ul {
 }
 
 .regenerativa-image-wrap {
-    height: 280px;
+    position: relative;
     overflow: hidden;
 }
 
 .regenerativa-image-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--cream);
     transition: transform var(--transition-slow);
 }
 
@@ -1492,4 +1493,10 @@ ul {
     .section-header {
         margin-bottom: 40px;
     }
+}
+
+/* Infographic images - show full without cropping */
+.card-image-wrap--contain img {
+    object-fit: contain;
+    background: var(--cream);
 }
