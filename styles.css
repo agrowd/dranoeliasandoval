@@ -1511,7 +1511,8 @@ ul {
 @media (max-width: 768px) {
     #card-blefaroplastia .card-image-wrap img,
     #card-reconstructiva .card-image-wrap img {
-        height: auto;
-        object-fit: contain;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
     }
 }
