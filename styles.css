@@ -1502,3 +1502,21 @@ ul {
     object-fit: contain;
     background: var(--cream);
 }
+
+/* Mobile: let all images show complete */
+@media (max-width: 768px) {
+    .card-image-wrap {
+        max-height: none;
+    }
+    .card-image-wrap img {
+        height: auto;
+        width: 100%;
+    }
+    .regenerativa-image-wrap {
+        max-height: none;
+    }
+    .regenerativa-image-wrap img {
+        height: auto;
+        width: 100%;
+    }
+}
