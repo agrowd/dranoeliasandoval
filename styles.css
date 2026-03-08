@@ -615,8 +615,8 @@ ul {
 
 .card-image-wrap {
     position: relative;
-    height: 280px;
-    /* Increased from 180px to show bigger clinical photos */
+    min-height: 200px;
+    max-height: 420px;
     overflow: hidden;
 }
 

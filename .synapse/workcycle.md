@@ -18,3 +18,4 @@
 - Regeneré imagen IA para Ginecología Láser logrando una visualización limpia, estética y frontal del rostro de la doctora.
 - Procesé `logo-ns.png` en Python para remover el fondo negro, logrando transparencia pura para el header/footer.
 - **Implementación de Carruseles Clínicos**: Analicé todas las fotos en las carpetas de servicios enviadas por la doctora (Lipólisis, Endoláser, CO2, Endolifting, Ozonoterapia, Vascular) y creé un sistema de carruseles en las tarjetas de tratamiento. Extendí la altura de las imágenes a 280px (para que se vean mucho más grandes e impactantes) y desarrollé un script genérico para soportar multi-carruseles independientemente en la misma página.
+- FIX: Removido el fondo negro del archivo logo-ns.png usando Python (Pillow) preservando los bordes.
