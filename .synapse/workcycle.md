@@ -19,3 +19,15 @@
 - Procesé `logo-ns.png` en Python para remover el fondo negro, logrando transparencia pura para el header/footer.
 - **Implementación de Carruseles Clínicos**: Analicé todas las fotos en las carpetas de servicios enviadas por la doctora (Lipólisis, Endoláser, CO2, Endolifting, Ozonoterapia, Vascular) y creé un sistema de carruseles en las tarjetas de tratamiento. Extendí la altura de las imágenes a 280px (para que se vean mucho más grandes e impactantes) y desarrollé un script genérico para soportar multi-carruseles independientemente en la misma página.
 - FIX: Removido el fondo negro del archivo logo-ns.png usando Python (Pillow) preservando los bordes.
+
+## Sesión 3 — 2026-03-14 (Restructuring & Cleanup)
+- **Inversión de Jerarquía**: Modifiqué todas las tarjetas de tratamiento (Láser, Inyectables, Regenerativa) para mostrar el contenido textual (Títulos, Descripción, Beneficios) antes de las imágenes, proporcionando el "ancla técnica" solicitada.
+- **Limpieza Médica**:
+    - "Endoláser Diodo" renombrado a "Endoláser Corporal".
+    - Filtrado de carrusel de "Lipo Papada" para eliminar fotos corporales incorrectas.
+    - Unificación de "M.E.L.A." y "Endoláser" bajo la lógica corporal.
+- **Optimización de Pantalla**:
+    - Implementé un `gallery-layout` en desktop para secciones clínicas (Exéresis, Reconstructiva) para llenar el ancho de pantalla y eliminar rectángulos vacíos.
+    - Ajusté `object-fit: contain` en mobile para casos clínicos críticos.
+- **Mejora Estética**: Eliminé overlays oscuros en desktop y aumenté saturación/vibrancia de imágenes vía CSS para replicar el look premium de mobile.
+- **Corrección Mobile Hierarchy**: Forcé `flex-direction: column` en tarjetas para asegurar que el texto se mantenga arriba incluso en responsive.
