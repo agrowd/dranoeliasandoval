@@ -31,3 +31,4 @@
     - Ajusté `object-fit: contain` en mobile para casos clínicos críticos.
 - **Mejora Estética**: Eliminé overlays oscuros en desktop y aumenté saturación/vibrancia de imágenes vía CSS para replicar el look premium de mobile.
 - **Corrección Mobile Hierarchy**: Forcé `flex-direction: column` en tarjetas para asegurar que el texto se mantenga arriba incluso en responsive.
+- **Publicación**: Subí todos los cambios a GitHub (rama `main`) con un commit descriptivo de la reestructuración integral.
