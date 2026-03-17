@@ -594,6 +594,77 @@ ul {
     flex-direction: column; /* Ensures DOM order: content then image */
 }
 
+/* ─── Featured Hero Card (Ultherapy) ─── */
+.treatment-card--hero {
+    grid-column: 1 / -1;
+    margin-bottom: 40px;
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr;
+    background: linear-gradient(to right, var(--white), #fdfbf9);
+    border: 1px solid rgba(200, 169, 126, 0.2);
+    box-shadow: 0 20px 60px rgba(44, 44, 44, 0.08);
+}
+
+.treatment-card--hero .card-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.treatment-card--hero .card-title {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+}
+
+.treatment-card--hero .card-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.treatment-card--hero .card-image-wrap {
+    max-height: 600px;
+    height: 600px;
+}
+
+/* ─── Triple Image Carousel (Ultherapy) ─── */
+.card-carousel--triple {
+    height: 600px !important;
+}
+
+.card-carousel--triple .card-carousel-track {
+    height: 600px !important;
+}
+
+.card-carousel-slide--triple {
+    display: flex !important;
+    gap: 15px;
+    padding: 30px;
+    background: #fdfbf9;
+}
+
+.triple-img-container {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.triple-img-container img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.5s ease;
+}
+
+.triple-img-container:hover img {
+    transform: scale(1.05);
+}
+
 /* Mobile: Ensure text is always on top by default */
 @media (max-width: 768px) {
     .treatment-card {
@@ -1428,6 +1499,35 @@ ul {
     #card-reconstructiva .card-image-wrap img {
         height: auto;
         max-height: 400px;
+    }
+
+    /* Hero Card Mobile Reversions */
+    .treatment-card--hero {
+        grid-template-columns: 1fr !important;
+        margin-bottom: 30px;
+    }
+
+    .treatment-card--hero .card-content {
+        padding: 30px;
+    }
+
+    .treatment-card--hero .card-title {
+        font-size: 1.6rem;
+    }
+
+    .treatment-card--hero .card-image-wrap,
+    .card-carousel--triple,
+    .card-carousel--triple .card-carousel-track {
+        height: 400px !important;
+    }
+
+    .card-carousel-slide--triple {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .triple-img-container {
+        border-radius: 2px;
     }
 
     .footer-grid {
