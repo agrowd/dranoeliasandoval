@@ -579,8 +579,8 @@ ul {
 
 .treatments-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for maximum visual impact as requested */
+    gap: 32px;
 }
 
 .treatment-card {
@@ -626,14 +626,14 @@ ul {
 .card-image-wrap {
     position: relative;
     overflow: hidden;
-    max-height: 280px;
+    max-height: 450px; /* Increased from 280px for desktop 2-column layout */
 }
 
 .card-image-wrap img {
     width: 100%;
-    height: 280px;
+    height: 450px; /* Increased for impact */
     object-fit: contain;
-    background: #f5f0eb;
+    background: #fdfbf9;
     display: block;
     transition: transform var(--transition-medium);
 }
@@ -729,24 +729,24 @@ ul {
 .card-carousel {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 450px; /* Increased height */
     overflow: hidden;
-    background: #f5f0eb;
+    background: #fdfbf9;
 }
 
 .card-carousel-track {
     display: flex;
-    height: 320px;
+    height: 450px;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-carousel-slide {
     min-width: 100%;
-    height: 320px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f5f0eb;
+    background: #fdfbf9;
 }
 
 .card-carousel-slide img {
@@ -817,25 +817,21 @@ ul {
     transform: scale(1.3);
 }
 
-/* ─── Special Gallery Layout for Clinical Cases (Desktop) ─── */
+/* ─── Special Gallery Layout for Clinical Cases (Removed span-2 logic, now 2-col base) ─── */
 @media (min-width: 1025px) {
-    #card-exeresis, #card-reconstructiva {
-        grid-column: span 2;
-    }
-    
     .card-image-wrap--gallery {
         display: flex !important;
-        gap: 15px;
-        padding: 15px;
+        gap: 0; 
+        padding: 0;
         background: #fdfbf9;
         max-height: none !important;
     }
     
     .card-image-wrap--gallery img {
-        height: 320px !important;
-        object-fit: cover !important;
+        height: 450px !important;
+        object-fit: contain !important;
         flex: 1;
-        border-radius: 2px;
+        border-radius: 0;
         filter: saturate(1.15) contrast(1.05) brightness(1.05);
     }
 }
