@@ -1,9 +1,15 @@
-# 🧠 Root — Dra. Noelia Sandoval Landing Page
+# 🧠# Root Map - Dra. Noelia Sandoval
 
 ## Arquitectura
-- **Stack**: HTML + CSS + JS (vanilla, static site)
-- **Tipo**: One-Page Landing Page de alta conversión
+- **Stack:** HTML5, Vanilla CSS, JS (Vite).
+- **Assets:** `assets/images/` (Activos clínicos limpios de UI móvil).
+- **Core:** `index.html` (Grid de 12 tarjetas de tratamiento).
 - **Target**: Mujeres de alto poder adquisitivo, medicina estética premium
+
+## Estado Actual
+- **Fase:** Auditoría Clínica Finalizada.
+- **Git:** Sincronizado con origin main.
+- **Deploy:** Vercel Dashboard activo.
 
 ## Estructura de Archivos
 ```
